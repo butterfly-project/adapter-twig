@@ -1,0 +1,15 @@
+bfy_adapter.twig.asset_version:  0
+bfy_adapter.twig.template_paths: []
+bfy_adapter.twig.configuration:  []
+
+services:
+
+  bfy_adapter.twig:
+    class: 'Twig_Environment'
+    arguments: [@bfy_adapter.twig.loader, %bfy_adapter.twig.configuration%]
+    calls:
+      - ['setExtensions', [#bfy_adapter.twig.extensions]]
+
+  bfy_adapter.twig.loader:
+    class: 'Twig_Loader_Filesystem'
+    arguments: [%bfy_adapter.twig.template_paths%]

@@ -1,0 +1,19 @@
+{
+    "name": "butterfly/adapter-twig",
+    "type": "library",
+    "description": "Butterfly PHP. Twig Adapter",
+    "keywords": ["twig", "adapter"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marat Fakhertdinov",
+            "email": "marat.fakhertdinov@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+
+        "twig/twig" :"1.16.*",
+        "twig/extensions": "1.1.*"
+    }
+}
