@@ -1,0 +1,8 @@
+bfy_adapter.twig.asset_version: 1
+
+bfy_adapter.twig.template_paths:
+  - '%app.dir.root%/views'
+
+#bfy_adapter.twig.configuration:
+#  cache: '%app.dir.root%/var/twig'
+#  debug: true

@@ -1,0 +1,19 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:butterfly-project/adapter-twig.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "butterfly/packages": "1.0.*",
+
+        "butterfly/adapter-twig": "dev-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Butterfly\\Tests\\": "tests/"
+        }
+    }
+}
