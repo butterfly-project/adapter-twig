@@ -7,7 +7,6 @@ abstract class ServicesTest extends BaseDiTest
     public function getDataForTestParameter()
     {
         return array(
-            array('bfy_adapter.twig.asset_version', 0),
             array('bfy_adapter.twig.template_paths', array()),
             array('bfy_adapter.twig.configuration', array()),
         );
