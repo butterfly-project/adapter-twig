@@ -2,7 +2,7 @@
 
 namespace Butterfly\Tests;
 
-abstract class ServicesTest extends BaseDiTest
+class ServicesTest extends BaseDiTest
 {
     public function getDataForTestParameter()
     {
