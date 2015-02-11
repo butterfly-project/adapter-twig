@@ -12,14 +12,6 @@ class ServicesTest extends BaseDiTest
         );
     }
 
-    public function getDataForTestService()
-    {
-        return array(
-            array('bfy_adapter.twig'),
-            array('bfy_adapter.twig.loader'),
-        );
-    }
-
     /**
      * @dataProvider getDataForTestParameter
      * @param string $parameterName
@@ -30,12 +22,37 @@ class ServicesTest extends BaseDiTest
         $this->assertEquals($expectedValue, self::$container->getParameter($parameterName));
     }
 
+    public function getDataForTestService()
+    {
+        return array(
+            array('bfy_adapter.twig.loader'),
+            array('bfy_adapter.twig.environment'),
+            array('bfy_adapter.twig'),
+        );
+    }
+
     /**
      * @dataProvider getDataForTestService
      * @param string $serviceName
      */
     public function testService($serviceName)
     {
-        self::$container->get($serviceName);
+        self::$container->getService($serviceName);
+    }
+
+    public function getDataForTestInterface()
+    {
+        return array(
+            array('Butterfly\Adapter\Twig\IRenderer'),
+        );
+    }
+
+    /**
+     * @dataProvider getDataForTestInterface
+     * @param string $interfaceName
+     */
+    public function testInterface($interfaceName)
+    {
+        self::$container->getInterface($interfaceName);
     }
 }

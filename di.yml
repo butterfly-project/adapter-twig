@@ -4,6 +4,10 @@ bfy_adapter.twig.configuration:  []
 services:
 
   bfy_adapter.twig:
+    class: 'Butterfly\Adapter\Twig\TwigAdapter'
+    arguments: [@bfy_adapter.twig.environment]
+
+  bfy_adapter.twig.environment:
     class: 'Twig_Environment'
     arguments: [@bfy_adapter.twig.loader, %bfy_adapter.twig.configuration%]
     calls:
@@ -12,3 +16,6 @@ services:
   bfy_adapter.twig.loader:
     class: 'Twig_Loader_Filesystem'
     arguments: [%bfy_adapter.twig.template_paths%]
+
+interfaces:
+  'Butterfly\Adapter\Twig\IRenderer': 'bfy_adapter.twig'
