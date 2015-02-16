@@ -1,6 +1,14 @@
 CHANGELOG
 =========
 
+1.1.0
+-----
+
+Added functionality:
+
+ * Created interface IRenderer
+ * Updated Twig version
+
 1.0.0
 -----
 
