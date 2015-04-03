@@ -17,5 +17,9 @@ services:
     class: 'Twig_Loader_Filesystem'
     arguments: [%bfy_adapter.twig.template_paths%]
 
+  bfy_adapter.twig.extension.debug:
+    class: 'Twig_Extension_Debug'
+    tags:  bfy_adapter.twig.extensions
+
 interfaces:
   'Butterfly\Adapter\Twig\IRenderer': 'bfy_adapter.twig'

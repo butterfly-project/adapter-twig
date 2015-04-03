@@ -25,6 +25,7 @@ class ServicesTest extends BaseDiTest
     public function getDataForTestService()
     {
         return array(
+            array('bfy_adapter.twig.extension.debug'),
             array('bfy_adapter.twig.loader'),
             array('bfy_adapter.twig.environment'),
             array('bfy_adapter.twig'),

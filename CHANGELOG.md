@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+1.2.0
+-----
+
+Added functionality:
+
+ * Added debug twig extension
+
 1.1.0
 -----
 
