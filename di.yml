@@ -20,6 +20,3 @@ services:
   bfy_adapter.twig.extension.debug:
     class: 'Twig_Extension_Debug'
     tags:  'bfy_adapter.twig.extensions'
-
-interfaces:
-  'Butterfly\Adapter\Twig\IRenderer': 'bfy_adapter.twig'
