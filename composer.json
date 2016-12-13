@@ -13,8 +13,8 @@
     "require": {
         "php": ">=5.3.3",
 
-        "twig/twig" :"~1.18",
-        "twig/extensions": "~1.2",
+        "twig/twig" :"*",
+        "twig/extensions": "*",
         "butterfly/interfaces-template-render": "~1.0"
     },
     "autoload": {
