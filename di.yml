@@ -5,21 +5,21 @@ services:
 
   bfy_adapter.twig:
     class: 'Butterfly\Adapter\Twig\TwigAdapter'
-    arguments: [@bfy_adapter.twig.environment]
+    arguments: ['@bfy_adapter.twig.environment']
 
   bfy_adapter.twig.environment:
     class: 'Twig_Environment'
-    arguments: [@bfy_adapter.twig.loader, %bfy_adapter.twig.configuration%]
+    arguments: ['@bfy_adapter.twig.loader', '%bfy_adapter.twig.configuration%']
     calls:
-      - ['setExtensions', [#bfy_adapter.twig.extensions]]
+      - ['setExtensions', ['#bfy_adapter.twig.extensions']]
 
   bfy_adapter.twig.loader:
     class: 'Twig_Loader_Filesystem'
-    arguments: [%bfy_adapter.twig.template_paths%]
+    arguments: ['%bfy_adapter.twig.template_paths%']
 
   bfy_adapter.twig.extension.debug:
     class: 'Twig_Extension_Debug'
-    tags:  bfy_adapter.twig.extensions
+    tags:  'bfy_adapter.twig.extensions'
 
 interfaces:
   'Butterfly\Adapter\Twig\IRenderer': 'bfy_adapter.twig'

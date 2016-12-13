@@ -2,10 +2,12 @@
 
 namespace Butterfly\Adapter\Twig;
 
+use Butterfly\Interfaces\TemplateRender\IRender;
+
 /**
  * @author Marat Fakhertdinov <marat.fakhertdinov@gmail.com>
  */
-class TwigAdapter implements IRenderer
+class TwigAdapter implements IRender
 {
     /**
      * @var \Twig_Environment
