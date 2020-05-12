@@ -11,7 +11,7 @@ services:
     class: 'Twig_Environment'
     arguments: ['@bfy_adapter.twig.loader', '%bfy_adapter.twig.configuration%']
     calls:
-      - ['setExtensions', ['#bfy_adapter.twig.extensions']]
+      - ['setExtensions', ['#bfy_adapter.twig.extensions\toArray']]
 
   bfy_adapter.twig.loader:
     class: 'Twig_Loader_Filesystem'
